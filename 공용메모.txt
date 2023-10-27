@@ -14,3 +14,6 @@ https://blog.naver.com/sangsan23/223046107048
 늘리는 값에 따라 같이 변하면 %비율
 
 https://wkd6262.github.io/JCC-test/
+
+--231027 20:50--
+메인html,css경로 수정
