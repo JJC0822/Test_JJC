@@ -1,0 +1,83 @@
+@charset "utf-8"; 
+body {
+  font-family: 'Pretendard Variable','Malgun Gothic', sans-serif;
+  color: white;
+}
+
+/* header */
+.header {
+  background-color: black;
+}
+
+.h_top1 {
+  display: flex;
+  padding: 20px 20px;
+  justify-content: space-between;
+
+}
+
+.h_top1 li {
+}
+
+.h_top1 li:nth-child(1){
+  width: 32px;
+}
+.h_top1 li:nth-child(2){
+  width: 32px;
+  color: #ea5028;
+}
+
+.h_txt {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-left: 20px;
+}
+.h_txt h1 {
+  font-size: 3.4rem;
+}
+.h_txt h1#color {
+  color: #ea5028;
+}
+.h_txt p {
+  font-weight: 200;
+  font-size: 3.3rem;
+}
+
+.meteor img {
+  width: 20%;
+  transform: rotate(15deg);
+  position: relative;
+}
+.meteor img:nth-child(1) {
+  left: 45%;
+  width: 55px;
+}
+.meteor img:nth-child(2) {
+  left: 55%;
+  width: 65px;
+}
+.meteor img:nth-child(3) {
+  left: 50%;
+  top: 105px;
+  width: 50px;
+}
+.meteor img:nth-child(4) {
+  left: 15%;
+  top: 40px;
+  width: 90px;
+}
+
+
+.h_img img:nth-child(1) {
+  width: 240px;
+  position: relative;
+  top: 80px;
+  left: 15px;
+}
+.h_img img:nth-child(2) {
+  width: 100%;
+}
+/* main */
+
+
+/* footer */
