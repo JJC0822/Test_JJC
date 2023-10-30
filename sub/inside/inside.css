@@ -370,7 +370,7 @@
     line-height: 1.4;
     display: flex;
   }
-  .boo ul {
+  .boo > ul {
     margin: 5%;
   }
   .boo img {
