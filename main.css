@@ -11,22 +11,26 @@ body {
   position: sticky;
   top: 0;
   margin-bottom: 1px;
-  z-index: 1;
 }
-.h_top {
+
+.h_top1 {
   display: flex;
   padding: 20px 20px;
   justify-content: space-between;
-  align-items: center;
 }
-.h_logo,
-.h_nav_icon {
+
+.h_top1 li:nth-child(1) {
   width: 32px;
 }
-.h_pc_menu {
+.h_top1 li:nth-child(2) {
+  width: 32px;
+  color: #ea5028;
+}
+.h_top_pc {
   display: none;
 }
 .nav_icon {
+  margin-top: 15px;
   display: block;
   width: 25px;
   height: 2.2px;
@@ -50,7 +54,6 @@ body {
   top: 9px;
   left: 10px;
 }
-
 .h_txt {
   font-weight: bold;
   text-transform: uppercase;
@@ -109,3 +112,71 @@ body {
 
 
 /* footer */
+
+
+/* pc */
+
+@media (width >= 1200px) {
+  .h_top {
+    display: none;
+  }
+  .h_top_pc {
+    padding: 2% 7% 15%;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  .h_top_pc img {
+    width: 70px;
+  }
+  
+  .h_menu ul{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .h_menu ul li{
+
+    margin: 15% 15%;
+    padding-bottom: 5%;
+    color: #ea5028;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+  .h_menu ul li a {
+    padding: 5%;
+  }
+  .h_menu ul li a:hover {
+    border-bottom: 5px solid #ea5028;
+  }
+  
+  .nav_icon {
+    margin-top: 30px;
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: #ea5028;
+    position: relative;
+  }
+  .nav_icon::after {
+    content: "";
+    width: 20px;
+    height: 4px;
+    background-color: #ea5028;
+    position: absolute;
+    top: -13px;
+  }
+  .nav_icon::before {
+    content: "";
+    width: 20px;
+    height: 4px;
+    background-color: #ea5028;
+    position: absolute;
+    top: 13px;
+    left: 32px;
+  }
+  
+}
+
