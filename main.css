@@ -2,29 +2,53 @@
 body {
   font-family: 'Pretendard Variable','Malgun Gothic', sans-serif;
   color: white;
+  background-color: #000;
+
 }
 
-/* header */
 .header {
-  background-color: black;
+  background-color: transparent;
+  position: sticky;
+  top: 0;
+  margin-bottom: 1px;
+  z-index: 1;
 }
-
-.h_top1 {
+.h_top {
   display: flex;
   padding: 20px 20px;
   justify-content: space-between;
-
+  align-items: center;
 }
-
-.h_top1 li {
-}
-
-.h_top1 li:nth-child(1){
+.h_logo,
+.h_nav_icon {
   width: 32px;
 }
-.h_top1 li:nth-child(2){
-  width: 32px;
-  color: #ea5028;
+.h_pc_menu {
+  display: none;
+}
+.nav_icon {
+  display: block;
+  width: 25px;
+  height: 2.2px;
+  background-color: #ea5028;
+  position: relative;
+}
+.nav_icon::after {
+  content: "";
+  width: 15px;
+  height: 2.2px;
+  background-color: #ea5028;
+  position: absolute;
+  top: -9px;
+}
+.nav_icon::before {
+  content: "";
+  width: 15px;
+  height: 2.2px;
+  background-color: #ea5028;
+  position: absolute;
+  top: 9px;
+  left: 10px;
 }
 
 .h_txt {
@@ -41,6 +65,10 @@ body {
 .h_txt p {
   font-weight: 200;
   font-size: 3.3rem;
+}
+
+.meteor {
+  transition: 1s;
 }
 
 .meteor img {
