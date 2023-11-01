@@ -255,15 +255,21 @@
     justify-content: space-evenly;
   }
   .h_menu ul li{
-    margin: 15% 30%;
-    padding: 0 3%;
+    margin: 15% 15%;
     padding-bottom: 5%;
     color: #ea5028;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-transform: capitalize;
     font-weight: 500;
   }
-  .h_menu ul li:nth-child(3) {
+  .h_menu ul li:nth-child(4) {
+    border-bottom: 5px solid #ea5028;
+  }
+
+  .h_menu ul li a {
+    padding: 15%;
+  }
+  .h_menu ul li a:hover {
     border-bottom: 5px solid #ea5028;
   }
 
