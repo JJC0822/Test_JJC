@@ -12,11 +12,18 @@ body {
 .txt_color {
   color: #ea5028;
 }
+.txt_small {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.txt_gray_color {
+  color: rgb(146, 146, 146);
+}
 .c_pc_txt {
   display: none;
 }
 /* header */
-.header {
+header {
   background-color: transparent;
   position: sticky;
   top: 0;
@@ -109,7 +116,7 @@ body {
   line-height: 1.8;
 }
 
-/* QNA,brochure  */
+/*** QNA,brochure  ***/
 .inner {
   font-size: 1.27rem;
   display: flex;
@@ -128,6 +135,231 @@ body {
 .inner .pencil {
   width: 28px;
 }
+/*** QNA ***/
+/* checkbox */
+input[type="checkbox"] {
+  display: none;
+  cursor: pointer;
+}
+.c_qna_menu {
+  background-color: #ece7da81;
+  padding: 60px 20px 120px;
+}
+.c_qna_menu h4 {
+  font-size: 1.29rem;
+}
+.c_qna_menu p {
+  font-size: 1rem;
+  margin-top: 20px;
+}
+.c_qna_menu .c_qna_check .c_qna_checkboxs {
+  margin: 50px 0 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-auto-rows: 45px;
+  gap: 10px;
+}
+.c_qna_menu .c_qna_check .c_qna_checkboxs .c_qna_txtbox {
+  padding: 20px 0;
+  cursor: pointer;
+}
+.c_qna_menu .c_qna_check label {
+  border: 1px solid lightgrey;
+  background-color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 45px;
+  cursor: pointer;
+}
+/* QNA checkbox custom */
+input#privacy_check + label {
+  cursor: pointer;
+}
+input#privacy_check + label > .custom_checkbox {
+  vertical-align: middle;
+  padding-left: 15px;
+  cursor: pointer;
+}
+input#privacy_check + label::before {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background-color: lightgrey;
+  vertical-align: middle;
+}
+input#privacy_check:checked + label::before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  background: lightgray url(./images/contact_check.svg) no-repeat 50% / cover;
+  vertical-align: middle;
+}
+
+/* projact, client */
+textarea::placeholder,
+input::placeholder {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Pretendard Variable", "Malgun Gothic", sans-serif;
+}
+.c_qna_menu .c_qna_txtboxs {
+  margin: 50px 0 70px;
+  max-width: 100%;
+  display: flex;
+  flex-flow: wrap;
+  gap: 10px;
+}
+.c_qna_menu .c_qna_txtboxs .c_qna_txtbox {
+  width: 100%;
+  padding: 15px 0;
+}
+.c_qna_menu .c_qna_txtboxs .c_qna_txtbox .c_qna_txt {
+  width: 100%;
+  height: 45px;
+  padding: 0 15px;
+  margin-top: 10px;
+  border: 1px solid lightgray;
+  outline: none;
+  box-sizing: border-box;
+}
+.c_qna_projact,
+.c_qna_client {
+  max-width: 1200px;
+}
+.c_qna_menu .c_qna_projact .c_qna_txtboxs textarea {
+  width: 100%;
+  height: 200px;
+  padding: 15px;
+  margin-top: 10px;
+  border: 1px solid lightgrey;
+  box-sizing: border-box;
+  resize: none;
+  outline: none;
+}
+/*** brochure ***/
+.c_brochure form {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 800px;
+  min-width: 180px;
+  width: 370px;
+  height: 550px;
+  padding: 40px 30px;
+  border-radius: 30px;
+  background-color: white;
+  box-sizing: border-box;
+  display: none;
+}
+.c_brochure form .c_brochure_client{
+  max-width: 1200px;
+}
+.c_brochure form .c_brochure_client .brochure_close_btn{
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 40px; right: 30px;
+}
+.c_brochure form .c_brochure_client .brochure_close_btn img{
+  width: 20px;
+}
+.c_brochure form .c_brochure_client h4{
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.c_brochure form .c_brochure_client .c_brochure_txtboxs{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  width: 100%;
+  margin: 50px 0 70px;
+}
+.c_brochure form .c_brochure_client .c_brochure_txtboxs .c_brochure_txtbox{
+  width: 100%;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+.c_brochure form .c_brochure_client .c_brochure_txtboxs .c_brochure_txtbox .c_brochure_txt {
+  width: 100%;
+  height: 35px;
+  padding: 0 15px;
+  margin-top: 10px;
+  border: 1px solid lightgray;
+  outline: none;
+  box-sizing: border-box;
+}
+/* brochure checkbox custom */
+input#b_privacy_check + label {
+  cursor: pointer;
+}
+input#b_privacy_check + label > .custom_checkbox {
+  vertical-align: middle;
+  padding-left: 5px;
+  cursor: pointer;
+}
+input#b_privacy_check + label::before {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background-color: lightgrey;
+  vertical-align: middle;
+}
+input#b_privacy_check:checked + label::before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  background: lightgray url(./images/contact_check.svg) no-repeat 50% / cover;
+  vertical-align: middle;
+}
+/* QNA, brochure btn */
+.c_btns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 50px;
+  gap: 10px;
+}
+.c_btns .c_btn {
+  font-size: 1rem;
+  border: 1px solid #ea5028;
+  border-radius: 30px;
+  transition: 0.2s;
+}
+.c_btns .submit_btn,
+.c_btns .reset_btn{
+  font-family: "Pretendard Variable", "Malgun Gothic", sans-serif;
+}
+.c_btns .submit_btn {
+  background-color: #ea5028;
+  color: white;
+}
+.c_btns .reset_btn {
+  background-color: white;
+  color: #ea5028;
+}
+
+.c_btns .submit_btn:hover {
+  background-color: white;
+  color: #ea5028;
+}
+.c_btns .reset_btn:hover {
+  background-color: #ea5028;
+  color: white;
+}
+.c_brochure_btn{
+  position: absolute;
+  bottom: 50px; left: 50%;
+  transform: translate(-50%,0);
+}
+.c_brochure_btn .submit_btn,
+.c_brochure_btn .reset_btn{
+  padding: 0 20px;
+  aspect-ratio: 5/2;
+}
 /* map */
 .c_map {
   width: 90%;
@@ -139,7 +371,7 @@ body {
 }
 
 /* footer */
-.footer {
+footer {
   background-color: #ea5028;
   color: white;
   text-align: center;
@@ -256,7 +488,7 @@ body {
     top: 50px;
     right: 135px;
   }
-  /* QNA, brochure */
+  /*** QNA, brochure ***/
   .inner {
     padding: 18px;
     transition: 0.2s;
@@ -273,14 +505,16 @@ body {
   .inner .pencil {
     width: 32px;
   }
-  /* map */
+  /* QNA */
+  /* brochure */
+  /*** map ***/
   .c_map {
     width: 100%;
     height: 520px;
     margin: 150px auto;
   }
-  /* footer */
-  .footer {
+  /*** footer ***/
+  footer {
     position: relative;
   }
   .f_txt {
@@ -295,6 +529,7 @@ body {
   .f_txt a,
   .family button {
     font-size: 1rem;
+    font-family: "Pretendard Variable", "Malgun Gothic", sans-serif;
   }
   .family {
     position: absolute;
