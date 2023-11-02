@@ -5,6 +5,9 @@ body {
   margin: 0 auto;
   text-align: center;
   overflow-x: hidden;
+}
+
+.body_img {
   background-image: url(./images/work/star-tile.svg);
 }
 
@@ -40,7 +43,7 @@ body {
   justify-content: space-between;
 }
 
-.h_top1 li:nth-child(1) {
+.h_top1 li:nth-child(3) {
   width: 70px;
 }
 .h_top1 li:nth-child(2) {
@@ -48,7 +51,7 @@ body {
   color: #ea5028;
 }
 .h_top_pc {
-  padding: 2% 7% 15%;
+  padding: 2% 7% 10%;
   display: flex;
   justify-content: space-between;
   position: sticky;
@@ -72,7 +75,7 @@ body {
   text-transform: capitalize;
   font-weight: 500;
 }
-.h_menu ul li:nth-child(3) {
+.h_menu ul li:first-child {
   border-bottom: 5px solid #ea5028;
 }
 
@@ -200,7 +203,6 @@ body {
 
 /*** btn *****/
 .work_btn {
-  margin: 100px 0;
   text-align: center;
 }
 
@@ -382,5 +384,9 @@ body {
   }
   .urlImg > .Img > .hidden {
     display: none;
+  }
+  .work_btn {
+    margin-bottom: 100px;
+    margin-top: 100px;
   }
 }
