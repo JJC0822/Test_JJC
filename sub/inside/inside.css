@@ -297,6 +297,10 @@
   }
 
   /* main */
+  .main {
+    padding: 0 10%;
+
+  }
 
   .m_svg {
     text-align: center;
@@ -326,12 +330,12 @@
     justify-content: space-between;
   }
   .m_video video {
-    width: 80%;
+    width: 50%;
     max-width: 600px;
     order: 2;
   }
   .m_video h1 {
-    margin: 4% 20px;
+    margin: 5% 20px;
     text-align: left;
     font-weight: 1000;
     font-size: 5rem;
