@@ -108,6 +108,9 @@
 
     width: 80px;
   }
+  .m_info img.run {
+    display: none;
+  }
   .m_info .m_img {
     padding: 25%;
   }
@@ -365,9 +368,10 @@
     width: 150px;
   }
   .m_info img.run {
+    display: block;
     position: relative;
-    top: -800px;
-    left: 0;
+    top: -115vh;
+    left: 70%;
     width: 70px;
   }
 

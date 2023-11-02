@@ -7,12 +7,12 @@ const robot = document.querySelector("img.robot");
 
 // ScrollTrigger를 사용하여 요소를 트리거하고 애니메이션을 정의
 gsap.to(".smooth-scroll-item", {
-  y: -300, // 원하는 애니메이션 효과 설정
+  y: -2000, // 원하는 애니메이션 효과 설정
   scrollTrigger: {
     trigger: container,
     start: "top top", // 트리거가 언제 시작될지 설정
     end: "bottom bottom", // 트리거가 언제 끝날지 설정
-    scrub: 1, // 스크롤 속도에 따라 애니메이션을 부드럽게 조절 (1은 100% 부드러움)
+    scrub: 2, // 스크롤 속도에 따라 애니메이션을 부드럽게 조절 (1은 100% 부드러움)
   },
 });
 gsap.to(".run", {
