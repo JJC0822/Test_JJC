@@ -68,6 +68,7 @@ header {
 }
 .i_video video {
   width: 90%;
+  margin: 2%;
 }
 .i_video h2 {
   margin: 8% 20px;
@@ -93,11 +94,13 @@ header {
 }
 .i_info img.robot {
   position: relative;
+  padding: 25% 0;
   width: 90px;
   top: -50px;
 }
 .i_info img.human {
   position: relative;
+  padding: 25% 0;
   top: 38px;
   left: 20px;
 
@@ -263,18 +266,22 @@ header {
     width: 50%;
     max-width: 600px;
     order: 2;
+    margin: 0 ;
   }
   .i_video h2 {
     margin: 5% 20px;
     text-align: left;
     font-weight: 1000;
-    font-size: 5rem;
+    font-size: 4.4rem;
   }
   /* m_info */
   .i_info {
     position: relative;
     top: -400px;
     margin: 0 20px;
+  }
+  .i_infotxt {
+    margin: 3% 0;
   }
   .i_info h3 {
     color: #ea5028;
@@ -303,9 +310,9 @@ header {
   }
   .i_info img.run {
     display: block;
-    position: relative;
-    top: -115vh;
-    left: 70%;
+    position: absolute;
+    top: -12%;
+    right: 35%;
     width: 70px;
   }
 
@@ -335,7 +342,7 @@ header {
     width: 80px;
     display: block;
     position: absolute;
-    top: 1550px;
+    top: 1850px;
     left: 800px;
   }
   /* info2 */

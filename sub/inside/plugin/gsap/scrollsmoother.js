@@ -5,7 +5,7 @@ const container = document.querySelector(".smooth-scroll-container");
 const run = document.querySelector("img.run");
 const robot = document.querySelector("img.robot");
 const i_info1 = document.querySelector(".i_infotxt");
-const i_info2 = document.querySelector(".i_video h3");
+const i_info2 = document.querySelector(".i_video h2");
 const i_info3 = document.querySelector(".boo");
 
 // ScrollTrigger를 사용하여 요소를 트리거하고 애니메이션을 정의
@@ -47,9 +47,9 @@ gsap.to(".i_infotxt", {
 });
 
 gsap.to(".i_video h2", {
-  y: -40, // 원하는 애니메이션 효과 설정
+  y: -50, // 원하는 애니메이션 효과 설정
   scrollTrigger: {
-    trigger: i_info2,
+    trigger: i_info1,
     start: "top bottom", // 트리거가 언제 시작될지 설정
     end: "bottom center", // 트리거가 언제 끝날지 설정
     scrub: 7, // 스크롤 속도에 따라 애니메이션을 부드럽게 조절 (1은 100% 부드러움)
