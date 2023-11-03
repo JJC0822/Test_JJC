@@ -3,7 +3,7 @@ body {
   font-family: 'Pretendard Variable','Malgun Gothic', sans-serif;
   color: white;
   background-color: #000;
-  height: 500vh;
+  overflow: hidden;
 }
 
 .header {

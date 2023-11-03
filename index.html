@@ -56,10 +56,10 @@
       </li>
     </ul>
       <div class="meteor">
-      <img src="./images/main/meteor-img3.svg" alt="유성 이미지">
-      <img src="./images/main/meteor-img1.svg" alt="유성 이미지">
-      <img src="./images/main/meteor-img2.svg" alt="유성 이미지">
-      <img src="./images/main/meteor-img4.svg" alt="유성 이미지">
+      <img src="./images/main/meteor-img3.svg" alt="유성 이미지" id="m_1">
+      <img src="./images/main/meteor-img1.svg" alt="유성 이미지" id="m_2">
+      <img src="./images/main/meteor-img2.svg" alt="유성 이미지" id="m_3">
+      <img src="./images/main/meteor-img4.svg" alt="유성 이미지" id="m_4">
       </div>
       <div class="h_img">
       <img src="./images/main/astronaut-img.svg" alt="우주선 & 우주인 이미지" id="h1">
@@ -68,5 +68,28 @@
     </div>
   </div>
 </section>
+<script>  
+const meteor = document.querySelectorAll('.meteor')
+  const meteor1 = document.querySelector('#m_1');
+  const meteor2 = document.querySelector('#m_2');
+  const meteor3 = document.querySelector('#m_3');
+  const meteor4 = document.querySelector('#m_4');
+  const h1 = document.querySelector('#h1');
+  const h2 = document.querySelector('#h2');
+  const h3 = document.querySelector('#h3');
+  addEventListener('mousemove', e => {
+      //마우스의 실시간 좌표확인
+      let x = e.clientX;
+      let y = e.clientY;
+      console.log(x,y)
+      meteor1.style.transform = `translate(${-x / -50}px, ${y / 70 + 10}px)`
+      meteor2.style.transform = `translate(${-x / -50}px, ${y / 70 + 10}px)`
+      meteor3.style.transform = `translate(${-x / -50}px, ${y / 70 + 10}px)`
+      meteor4.style.transform = `translate(${x / -50}px, ${y / 70 + 10}px)`
+      h1.style.transform = `translate(${-x / -50}px, ${y / 70 + 10}px)`
+      h2.style.transform = `translate(${30 - x / 60}px, ${40 - y / 50}px)`
+      h3.style.transform = `translate(${30 - x / 60}px, ${40 - y / 50}px)`
+    })
+</script>
 </body>
 </html>
