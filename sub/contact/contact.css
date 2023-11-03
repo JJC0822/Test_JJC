@@ -23,49 +23,8 @@ body {
   display: none;
 }
 /* header */
-header {
-  background-color: transparent;
-  position: sticky;
-  top: 0;
-  margin-bottom: 1px;
-  z-index: 1;
-}
-.h_top {
-  display: flex;
-  padding: 20px 20px;
-  justify-content: space-between;
-  align-items: center;
-}
-.h_logo,
-.h_nav_icon {
-  width: 32px;
-}
-.h_pc_menu {
-  display: none;
-}
-.nav_icon {
-  display: block;
-  width: 25px;
-  height: 2.2px;
-  background-color: #ea5028;
-  position: relative;
-}
-.nav_icon::after {
-  content: "";
-  width: 15px;
-  height: 2.2px;
-  background-color: #ea5028;
-  position: absolute;
-  top: -9px;
-}
-.nav_icon::before {
-  content: "";
-  width: 15px;
-  height: 2.2px;
-  background-color: #ea5028;
-  position: absolute;
-  top: 9px;
-  left: 10px;
+.h_top .h_pc_menu .nav_contact {
+  border-bottom: 5px solid #ea5028;
 }
 /* contact */
 .contact {
@@ -117,22 +76,32 @@ header {
 }
 
 /*** QNA,brochure  ***/
-.inner {
-  font-size: 1.27rem;
+.c_qna,
+.c_brochure {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-flow: column;
+  justify-content: center;
+}
+.c_qna .inner,
+.c_brochure .inner {
+  font-size: 1.27rem;
   padding: 17px;
   margin: 0 20px;
   border-bottom: 1px solid #ea5028;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
 }
-.inner p {
+.c_qna .inner p,
+.c_brochure .inner p {
   font-weight: 500;
 }
-.inner img {
+.c_qna .inner img,
+.c_brochure .inner img {
   width: 24px;
 }
-.inner .pencil {
+.c_qna .inner .pencil {
   width: 28px;
 }
 /*** QNA ***/
@@ -144,6 +113,7 @@ input[type="checkbox"] {
 .c_qna_menu {
   background-color: #ece7da81;
   padding: 60px 20px 120px;
+  box-sizing: border-box;
 }
 .c_qna_menu h4 {
   font-size: 1.29rem;
@@ -207,8 +177,8 @@ input::placeholder {
 .c_qna_menu .c_qna_txtboxs {
   margin: 50px 0 70px;
   max-width: 100%;
-  display: flex;
-  flex-flow: wrap;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(200px, 1fr));
   gap: 10px;
 }
 .c_qna_menu .c_qna_txtboxs .c_qna_txtbox {
@@ -224,10 +194,6 @@ input::placeholder {
   outline: none;
   box-sizing: border-box;
 }
-.c_qna_projact,
-.c_qna_client {
-  max-width: 1200px;
-}
 .c_qna_menu .c_qna_projact .c_qna_txtboxs textarea {
   width: 100%;
   height: 200px;
@@ -241,58 +207,67 @@ input::placeholder {
 /*** brochure ***/
 .c_brochure form {
   position: fixed;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 800px;
-  min-width: 180px;
   width: 370px;
-  height: 550px;
+  height: 600px;
   padding: 40px 30px;
   border-radius: 30px;
   background-color: white;
   box-sizing: border-box;
   display: none;
+  z-index: 1;
 }
-.c_brochure form .c_brochure_client{
+.c_brochure form .c_brochure_client {
   max-width: 1200px;
 }
-.c_brochure form .c_brochure_client .brochure_close_btn{
+.c_brochure form .c_brochure_client .brochure_close_btn {
   border: none;
   background-color: transparent;
   position: absolute;
-  top: 40px; right: 30px;
+  top: 40px;
+  right: 30px;
 }
-.c_brochure form .c_brochure_client .brochure_close_btn img{
+.c_brochure form .c_brochure_client .brochure_close_btn img {
   width: 20px;
 }
-.c_brochure form .c_brochure_client h4{
+.c_brochure form .c_brochure_client h4 {
   font-size: 1.35rem;
   font-weight: 700;
-  margin-bottom: 10px;
   overflow: hidden;
 }
-.c_brochure form .c_brochure_client .c_brochure_txtboxs{
+.c_brochure form .c_brochure_client .c_brochure_txtboxs {
   display: flex;
   flex-flow: column;
   justify-content: center;
   width: 100%;
-  margin: 50px 0 70px;
+  margin: 45px 0 60px;
 }
-.c_brochure form .c_brochure_client .c_brochure_txtboxs .c_brochure_txtbox{
+.c_brochure form .c_brochure_client .c_brochure_txtboxs .c_brochure_txtbox {
   width: 100%;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   box-sizing: border-box;
 }
-.c_brochure form .c_brochure_client .c_brochure_txtboxs .c_brochure_txtbox .c_brochure_txt {
+.c_brochure
+  form
+  .c_brochure_client
+  .c_brochure_txtboxs
+  .c_brochure_txtbox
+  .c_brochure_txt {
   width: 100%;
-  height: 35px;
+  height: 40px;
   padding: 0 15px;
   margin-top: 10px;
   border: 1px solid lightgray;
   outline: none;
   box-sizing: border-box;
+  overflow: hidden;
 }
 /* brochure checkbox custom */
+.c_brochure form .c_brochure_client .c_brochure_txtboxs .privacy_checkbox {
+  padding-bottom: 10px;
+}
 input#b_privacy_check + label {
   cursor: pointer;
 }
@@ -318,19 +293,20 @@ input#b_privacy_check:checked + label::before {
 }
 /* QNA, brochure btn */
 .c_btns {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 50px;
+  display: flex;
+  justify-content: center;
   gap: 10px;
 }
 .c_btns .c_btn {
+  width: 200px;
+  height: 50px;
   font-size: 1rem;
   border: 1px solid #ea5028;
   border-radius: 30px;
   transition: 0.2s;
 }
 .c_btns .submit_btn,
-.c_btns .reset_btn{
+.c_btns .reset_btn {
   font-family: "Pretendard Variable", "Malgun Gothic", sans-serif;
 }
 .c_btns .submit_btn {
@@ -350,13 +326,19 @@ input#b_privacy_check:checked + label::before {
   background-color: #ea5028;
   color: white;
 }
-.c_brochure_btn{
+.c_brochure_btn {
   position: absolute;
-  bottom: 50px; left: 50%;
-  transform: translate(-50%,0);
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.c_brochure_btn .c_btn {
+  width: 150px;
+  height: 45px;
+  box-sizing: border-box;
 }
 .c_brochure_btn .submit_btn,
-.c_brochure_btn .reset_btn{
+.c_brochure_btn .reset_btn {
   padding: 0 20px;
   aspect-ratio: 5/2;
 }
@@ -370,44 +352,7 @@ input#b_privacy_check:checked + label::before {
   z-index: -9999;
 }
 
-/* footer */
-footer {
-  background-color: #ea5028;
-  color: white;
-  text-align: center;
-}
-.f_txt {
-  padding: 30px;
-  font-weight: 300;
-  font-size: 0.9rem;
-  line-height: 1.2;
-}
-.f_txt p {
-  font-size: 0.9rem;
-  font-weight: 400;
-}
-.f_txt a {
-  font-size: 0.78rem;
-}
-.family button {
-  border-radius: 50px;
-  outline: none;
-  border: none;
-  padding: 8px 18px;
-  margin-bottom: 30px;
-  font-size: 0.7rem;
-  background-color: #fff;
-  color: #ea5028;
-}
 
-.top_btn {
-  border: 1px solid #ea5028;
-  background-color: #fff;
-  padding: 8px;
-  position: fixed;
-  bottom: 70px;
-  right: 15px;
-}
 
 /* pc */
 @media (width >= 1200px) {
@@ -418,53 +363,16 @@ footer {
   .c_pc_txt {
     display: inline;
   }
-  /* header */
-  .header {
-    padding-top: 10px;
-  }
-  .h_pc_menu {
-    display: flex;
-    gap: 60px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-transform: capitalize;
-    color: #ea5028;
-  }
-  .h_logo,
-  .h_nav_icon {
-    width: 65px;
-  }
-  .nav_icon {
-    display: block;
-    width: 40px;
-    height: 4px;
-    background-color: #ea5028;
-    position: relative;
-  }
-  .nav_icon::after {
-    content: "";
-    width: 20px;
-    height: 4px;
-    background-color: #ea5028;
-    position: absolute;
-    top: -13px;
-  }
-  .nav_icon::before {
-    content: "";
-    width: 20px;
-    height: 4px;
-    background-color: #ea5028;
-    position: absolute;
-    top: 13px;
-    left: 32px;
+  .txt_bold {
+    font-weight: 700;
   }
 
-  /* contact */
+  /*** contact ***/
   .contact {
-    max-width: 1200px;
     margin: 0 auto;
   }
   .c_title {
+    padding: 0 250px;
     margin: 80px 0 170px;
     overflow: hidden;
   }
@@ -472,7 +380,8 @@ footer {
     width: 60%;
   }
   .c_txt {
-    margin-bottom: 45px;
+    width: 1200px;
+    margin: 0 auto 55px;
   }
   .c_txt h3 {
     width: 800px;
@@ -489,61 +398,171 @@ footer {
     right: 135px;
   }
   /*** QNA, brochure ***/
-  .inner {
+  .c_qna .inner,
+  .c_brochure .inner {
+    width: 1200px;
     padding: 18px;
+    margin: 0 auto;
+    box-sizing: border-box;
     transition: 0.2s;
   }
-  .inner:hover {
+  .c_qna .inner:hover,
+  .c_brochure .inner:hover {
     background-color: #ece7da81;
   }
-  .inner p {
+  .c_qna .inner p,
+  .c_brochure .inner p {
     font-size: 1.875rem;
   }
-  .inner img {
+  .c_qna .inner img,
+  .c_brochure .inner img {
     width: 27px;
   }
-  .inner .pencil {
+  .c_qna .inner .pencil {
     width: 32px;
   }
-  /* QNA */
-  /* brochure */
+  /*** QNA ***/
+  /* checkbox */
+  .c_qna_menu {
+    padding: 80px 250px 120px;
+    display: none;
+  }
+  .c_qna_menu h4 {
+    font-size: 1.6rem;
+  }
+  .c_qna_menu p {
+    font-size: 1.15rem;
+    margin-top: 25px;
+  }
+  .c_qna_menu .c_qna_check .c_qna_checkboxs {
+    margin: 65px 0 140px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-auto-rows: 65px;
+    gap: 20px;
+  }
+  .c_qna_menu .c_qna_check label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 60px;
+  }
+
+  /* projact, client */
+  .c_qna_menu .c_qna_txtboxs .c_qna_txtbox label {
+    font-size: 1.15rem;
+  }
+  .c_qna_menu .c_qna_txtboxs {
+    margin: 65px 0 100px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .c_qna_menu .c_qna_txtboxs .c_qna_txtbox {
+    padding: 0 0 30px;
+  }
+  .c_qna_menu .c_qna_txtboxs .c_textarea {
+    grid-column: 1 / 3;
+  }
+  .c_qna_menu .c_qna_txtboxs .c_qna_txtbox .c_qna_txt {
+    height: 65px;
+    padding: 0 20px;
+    margin-top: 20px;
+  }
+  .c_qna_menu .c_qna_projact .c_qna_txtboxs textarea {
+    height: 250px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  /*** brochure ***/
+  .c_brochure form {
+    width: 610px;
+    height: 780px;
+    padding: 50px 30px;
+    border-radius: 30px;
+  }
+  .c_brochure form .c_brochure_client .brochure_close_btn {
+    top: 50px;
+  }
+  .c_brochure form .c_brochure_client .brochure_close_btn img {
+    width: 20px;
+  }
+  .c_brochure form .c_brochure_client h4 {
+    font-size: 1.5rem;
+  }
+  .c_brochure form .c_brochure_client .c_brochure_txtboxs {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 100%;
+    margin: 45px 0 60px;
+  }
+  .c_brochure form .c_brochure_client .c_brochure_txtboxs .c_brochure_txtbox {
+    width: 100%;
+    padding-bottom: 25px;
+    box-sizing: border-box;
+  }
+  .c_brochure
+    form
+    .c_brochure_client
+    .c_brochure_txtboxs
+    .c_brochure_txtbox
+    label {
+    font-size: 1.15rem;
+  }
+  .c_brochure
+    form
+    .c_brochure_client
+    .c_brochure_txtboxs
+    .c_brochure_txtbox
+    .c_brochure_txt {
+    height: 60px;
+    padding: 0 20px;
+    margin-top: 15px;
+  }
+  /* QNA checkbox custom */
+  .privacy_check label .custom_checkbox .txt_gray_color {
+    font-weight: 500;
+  }
+  input#privacy_check + label > .custom_checkbox {
+    font-size: 1rem;
+    vertical-align: middle;
+    padding-left: 15px;
+    cursor: pointer;
+  }
+  input#b_privacy_check + label > .custom_checkbox {
+    font-size: 1rem;
+  }
+  input#privacy_check + label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+  }
+  input#privacy_check:checked + label::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: lightgray url(./images/contact_check.svg) no-repeat 50% / cover;
+    vertical-align: middle;
+  }
+  /* QNA, brochure btn */
+  .c_btns {
+    gap: 20px;
+  }
+  .c_btns .c_btn {
+    width: 280px;
+    height: 68px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 50px;
+  }
+  .c_brochure_btn .c_btn {
+    width: 250px;
+    height: 70px;
+  }
   /*** map ***/
   .c_map {
     width: 100%;
     height: 520px;
     margin: 150px auto;
   }
-  /*** footer ***/
-  footer {
-    position: relative;
-  }
-  .f_txt {
-    padding: 20px 80px;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-  }
-  .f_txt p,
-  .f_txt a,
-  .family button {
-    font-size: 1rem;
-    font-family: "Pretendard Variable", "Malgun Gothic", sans-serif;
-  }
-  .family {
-    position: absolute;
-    top: 12px;
-    right: 80px;
-  }
-  .family button {
-    padding: 6px 18px;
-    margin-bottom: 0;
-    color: #ea5028;
-  }
-  .top_btn {
-    position: fixed;
-    bottom: 55px;
-    right: 80px;
-  }
+ 
 }
