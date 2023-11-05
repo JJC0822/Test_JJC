@@ -16,35 +16,27 @@
   <!-- reset -->
   <link rel="stylesheet" href="./common/css/reset.css">
   <!-- css -->
+  <link rel="stylesheet" href="./common/css/header.css">
   <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-  <section class="header">
-    <div class="header">
-      <div class="h_top">
-        <ul class="h_top1">
-          <li>
-            <a href="#"><img src="./images/inside/logo.svg" alt="로고"></a>
-          </li>
-          <li>
-            <nav class="h_nav_icon"><a href="#"><span class="nav_icon"></span></a></nav>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="h_top_pc">
-      <a href="#"><img src="./images/inside/logo.svg" alt="로고"></a>
-    <div class="h_menu">
-      <ul>
-        <li><a href="./sub/work/Work.html">works</a></li>
-        <li><a href=#>About</a></li>
-        <li><a href="./sub/contact/contact.html">Contact</a></li>
-        <li><a href="./sub/inside/inside.html">inside</a></li>
-      </ul>
-    </div>
-    <nav class="h_nav_icon"><a href="#"><span class="nav_icon"></span></a></nav>
+<!-- header -->
+<header>
+  <div class="h_top">
+    <h2 class="h_logo">
+      <a href="#"><img src="./images/inside/logo.svg" alt="로고" ></a>
+    </h2>
+    <menu class="h_pc_menu">
+      <li><a href="#">works</a></li>
+      <li><a href="#">about</a></li>
+      <li><a href="#">contact</a></li>
+      <li><a href="#">inside</a></li>
+    </menu>
+    <nav class="h_nav_icon">
+      <a href="#"><span class="nav_icon"></span></a>
+    </nav>
   </div>
-  </section>
+</header>
   <div class="h_main">
     <ul class="h_txt">
       <li>
@@ -65,9 +57,9 @@
       <img src="./images/main/astronaut-img.svg" alt="우주선 & 우주인 이미지" id="h1">
       <img src="./images/main/planet-group-m.svg" alt="행성표면 & 우주인 이미지" id="h2">
       <img src="./images/main/planet-group.svg" alt="행성표면 & 우주인 이미지" id="h3">
+      <img src="./images/main/mv-title-icon.svg" alt="부유하는 우주인" id="h4">
     </div>
   </div>
-</section>
 <script>  
 const meteor = document.querySelectorAll('.meteor')
   const meteor1 = document.querySelector('#m_1');
@@ -77,18 +69,20 @@ const meteor = document.querySelectorAll('.meteor')
   const h1 = document.querySelector('#h1');
   const h2 = document.querySelector('#h2');
   const h3 = document.querySelector('#h3');
+  const h4 = document.querySelector('#h4');
   addEventListener('mousemove', e => {
       //마우스의 실시간 좌표확인
       let x = e.clientX;
       let y = e.clientY;
       console.log(x,y)
-      meteor1.style.transform = `translate(${-x / -50}px, ${y / 70 + 10}px)`
-      meteor2.style.transform = `translate(${-x / -50}px, ${y / 70 + 10}px)`
-      meteor3.style.transform = `translate(${-x / -50}px, ${y / 70 + 10}px)`
-      meteor4.style.transform = `translate(${x / -50}px, ${y / 70 + 10}px)`
+      meteor1.style.transform = `translate(${-x / -50}px, ${y / 70 + 10}px) rotate(15deg)`
+      meteor2.style.transform = `translate(${-x / -50}px, ${y / 70 + 10}px) rotate(15deg)`
+      meteor3.style.transform = `translate(${-x / -50}px, ${y / 70 + 10}px) rotate(15deg)`
+      meteor4.style.transform = `translate(${x / -50}px, ${y / 70 + 10}px)  rotate(15deg)`
       h1.style.transform = `translate(${-x / -50}px, ${y / 70 + 10}px)`
       h2.style.transform = `translate(${30 - x / 60}px, ${40 - y / 50}px)`
       h3.style.transform = `translate(${30 - x / 60}px, ${40 - y / 50}px)`
+      h4.style.transform = `translate(${30 - x / 60}px, ${y / 50}px)`
     })
 </script>
 </body>
