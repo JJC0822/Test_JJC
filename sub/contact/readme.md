@@ -47,3 +47,8 @@
 - css - 페이지 메인 제목 뒤에 gsapPlugin 중에 MotionPath를 적용 시킬 svg 이미지 넣고 위치와 크기를 조절하려는데 콘덴츠가 자꾸 사라졌지만 결국 해결
   => 이유: 부모요소에 있던 overflow 때문 그래서 margin 대신 padding으로 여백 조절
 -
+
+### 231104
+
+- html - 헤더 사이드 메뉴에 side_nav 페이지 연결
+- css - 일부 수정

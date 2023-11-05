@@ -51,6 +51,28 @@ gsap.to(".c_map", {
     scrub: 3,
   },
 });
+// header side menu
+const menu = document.querySelector(".s_menu");
+const btn = menu.querySelector(".s_nav-tgl");
+const sub = document.querySelector(".s_nav ul");
+
+btn.addEventListener("click", (evt) => {
+  menu.classList.toggle("active");
+});
+
+let isMenuOpen = false; // 초기에 메뉴는 닫힌 상태
+
+btn.addEventListener("click", (evt) => {
+  isMenuOpen = !isMenuOpen; // 메뉴 상태를 열린/닫힌으로 토글
+
+  if (isMenuOpen) {
+    menu.classList.add("active");
+    sub.style.display = "block";
+  } else {
+    menu.classList.remove("active");
+    sub.style.display = "none";
+  }
+});
 
 // QNA
 const innerQnaBtn = document.querySelector(".inner_qna_btn");
