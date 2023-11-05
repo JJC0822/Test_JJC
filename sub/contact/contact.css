@@ -32,12 +32,24 @@ body {
 }
 .c_title {
   text-align: center;
-  margin: 10px 0 90px;
+  padding: 130px 0;
   position: relative;
 }
+.c_title .page_title_img {
+  min-width: 280px;
+  max-width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .c_title .page_title_txt {
-  min-width: 370px;
-  max-width: 60%;
+  min-width: 320px;
+  max-width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .c_txt {
   line-height: 1.3;
@@ -66,7 +78,8 @@ body {
   font-weight: 700;
 }
 .c_address p {
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   font-size: 0.9rem;
   margin-top: 40px;
 }
@@ -112,8 +125,13 @@ input[type="checkbox"] {
 }
 .c_qna_menu {
   background-color: #ece7da81;
-  padding: 60px 20px 120px;
   box-sizing: border-box;
+  overflow: hidden;
+  height: 0;
+  transition: 0.3s;
+}
+.c_qna_menu.active {
+  min-height: 2200px;
 }
 .c_qna_menu h4 {
   font-size: 1.29rem;
@@ -122,8 +140,16 @@ input[type="checkbox"] {
   font-size: 1rem;
   margin-top: 20px;
 }
+.c_qna_menu .c_qna_check,
+.c_qna_menu .c_qna_projact {
+  padding: 80px 20px 0;
+  box-sizing: border-box;
+}
+.c_qna_menu .c_qna_client {
+  padding: 0 20px;
+}
 .c_qna_menu .c_qna_check .c_qna_checkboxs {
-  margin: 50px 0 80px;
+  margin: 30px 0 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   grid-auto-rows: 45px;
@@ -175,7 +201,7 @@ input::placeholder {
   font-family: "Pretendard Variable", "Malgun Gothic", sans-serif;
 }
 .c_qna_menu .c_qna_txtboxs {
-  margin: 50px 0 70px;
+  margin: 50px 0 50px;
   max-width: 100%;
   display: grid;
   grid-template-columns: repeat(1, minmax(200px, 1fr));
@@ -204,53 +230,71 @@ input::placeholder {
   resize: none;
   outline: none;
 }
+
 /*** brochure ***/
-.c_brochure form {
+.c_brochure_modal {
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  display: none;
+}
+.c_brochure_modal .c_brochure_content {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 370px;
+  width: 90vw;
+  max-width: 370px;
   height: 600px;
   padding: 40px 30px;
   border-radius: 30px;
   background-color: white;
   box-sizing: border-box;
-  display: none;
-  z-index: 1;
 }
-.c_brochure form .c_brochure_client {
+.c_brochure_modal .c_brochure_content .c_brochure_client {
   max-width: 1200px;
 }
-.c_brochure form .c_brochure_client .brochure_close_btn {
+.c_brochure_modal .c_brochure_content .c_brochure_client .brochure_close_btn {
   border: none;
-  background-color: transparent;
   position: absolute;
   top: 40px;
   right: 30px;
+  cursor: pointer;
 }
-.c_brochure form .c_brochure_client .brochure_close_btn img {
+.c_brochure_modal
+  .c_brochure_content
+  .c_brochure_client
+  .brochure_close_btn
+  img {
   width: 20px;
 }
-.c_brochure form .c_brochure_client h4 {
+.c_brochure_modal .c_brochure_content .c_brochure_client h4 {
   font-size: 1.35rem;
   font-weight: 700;
   overflow: hidden;
 }
-.c_brochure form .c_brochure_client .c_brochure_txtboxs {
+.c_brochure_modal .c_brochure_content .c_brochure_client .c_brochure_txtboxs {
   display: flex;
   flex-flow: column;
   justify-content: center;
   width: 100%;
   margin: 45px 0 60px;
 }
-.c_brochure form .c_brochure_client .c_brochure_txtboxs .c_brochure_txtbox {
+.c_brochure_modal
+  .c_brochure_content
+  .c_brochure_client
+  .c_brochure_txtboxs
+  .c_brochure_txtbox {
   width: 100%;
   padding-bottom: 15px;
   box-sizing: border-box;
 }
-.c_brochure
-  form
+.c_brochure_modal
+  .c_brochure_content
   .c_brochure_client
   .c_brochure_txtboxs
   .c_brochure_txtbox
@@ -265,7 +309,11 @@ input::placeholder {
   overflow: hidden;
 }
 /* brochure checkbox custom */
-.c_brochure form .c_brochure_client .c_brochure_txtboxs .privacy_checkbox {
+.c_brochure_modal
+  .c_brochure_content
+  .c_brochure_client
+  .c_brochure_txtboxs
+  .privacy_checkbox {
   padding-bottom: 10px;
 }
 input#b_privacy_check + label {
@@ -296,6 +344,7 @@ input#b_privacy_check:checked + label::before {
   display: flex;
   justify-content: center;
   gap: 10px;
+  padding: 0 20px;
 }
 .c_btns .c_btn {
   width: 200px;
@@ -326,33 +375,29 @@ input#b_privacy_check:checked + label::before {
   background-color: #ea5028;
   color: white;
 }
-.c_brochure_btn {
+.c_brochure_modal .c_brochure_content .c_brochure_btn {
+  width: 100%;
   position: absolute;
   bottom: 50px;
   left: 50%;
   transform: translate(-50%, 0);
-}
-.c_brochure_btn .c_btn {
-  width: 150px;
-  height: 45px;
   box-sizing: border-box;
 }
-.c_brochure_btn .submit_btn,
-.c_brochure_btn .reset_btn {
+.c_brochure_modal .c_brochure_content .c_brochure_btn .c_btn {
+  max-width: 150px;
+  height: 45px;
   padding: 0 20px;
-  aspect-ratio: 5/2;
+  box-sizing: border-box;
 }
 /* map */
 .c_map {
   width: 90%;
   max-width: 1160px;
   height: 320px;
-  margin: 40px auto 120px;
+  margin: 80px auto 120px;
   border-radius: 30px;
   z-index: -9999;
 }
-
-
 
 /* pc */
 @media (width >= 1200px) {
@@ -372,12 +417,14 @@ input#b_privacy_check:checked + label::before {
     margin: 0 auto;
   }
   .c_title {
-    padding: 0 250px;
-    margin: 80px 0 170px;
-    overflow: hidden;
+    padding: 220px 250px 260px;
+  }
+  .c_title .page_title_img {
+    max-width: 480px;
   }
   .c_title .page_title_txt {
-    width: 60%;
+    max-width: 650px;
+    width: 50%;
   }
   .c_txt {
     width: 1200px;
@@ -423,22 +470,33 @@ input#b_privacy_check:checked + label::before {
   }
   /*** QNA ***/
   /* checkbox */
-  .c_qna_menu {
-    padding: 80px 250px 120px;
-    display: none;
+  .c_qna_menu .c_qna_check,
+  .c_qna_menu .c_qna_projact {
+    padding: 100px 0 0;
+  }
+  .c_qna_menu.active {
+    min-height: 2200px;
   }
   .c_qna_menu h4 {
     font-size: 1.6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
   .c_qna_menu p {
     font-size: 1.15rem;
-    margin-top: 25px;
+    max-width: 1200px;
+    margin: 25px auto 0;
+    padding: 0 20px;
   }
   .c_qna_menu .c_qna_check .c_qna_checkboxs {
-    margin: 65px 0 140px;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    width: 1200px;
+    margin: 65px auto;
+    padding: 0 20px;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     grid-auto-rows: 65px;
     gap: 20px;
+    box-sizing: border-box;
   }
   .c_qna_menu .c_qna_check label {
     font-size: 1.2rem;
@@ -451,7 +509,9 @@ input#b_privacy_check:checked + label::before {
     font-size: 1.15rem;
   }
   .c_qna_menu .c_qna_txtboxs {
-    margin: 65px 0 100px;
+    max-width: 1200px;
+    margin: 65px auto 100px;
+    padding: 0 20px;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
@@ -466,49 +526,60 @@ input#b_privacy_check:checked + label::before {
     padding: 0 20px;
     margin-top: 20px;
   }
+  .c_qna_menu .c_qna_projact {
+    padding-bottom: 20px;
+  }
   .c_qna_menu .c_qna_projact .c_qna_txtboxs textarea {
     height: 250px;
     padding: 20px;
     margin-top: 20px;
   }
   /*** brochure ***/
-  .c_brochure form {
+  .c_brochure_modal .c_brochure_content {
     width: 610px;
     height: 780px;
     padding: 50px 30px;
     border-radius: 30px;
   }
-  .c_brochure form .c_brochure_client .brochure_close_btn {
+  .c_brochure_modal .c_brochure_content .c_brochure_client .brochure_close_btn {
     top: 50px;
   }
-  .c_brochure form .c_brochure_client .brochure_close_btn img {
+  .c_brochure_modal
+    .c_brochure_content
+    .c_brochure_client
+    .brochure_close_btn
+    img {
     width: 20px;
   }
-  .c_brochure form .c_brochure_client h4 {
+  .c_brochure_modal .c_brochure_content .c_brochure_client h4 {
     font-size: 1.5rem;
   }
-  .c_brochure form .c_brochure_client .c_brochure_txtboxs {
+  .c_brochure_modal .c_brochure_content .c_brochure_client .c_brochure_txtboxs {
     display: flex;
     flex-flow: column;
     justify-content: center;
     width: 100%;
     margin: 45px 0 60px;
   }
-  .c_brochure form .c_brochure_client .c_brochure_txtboxs .c_brochure_txtbox {
+  .c_brochure_modal
+    .c_brochure_content
+    .c_brochure_client
+    .c_brochure_txtboxs
+    .c_brochure_txtbox {
     width: 100%;
     padding-bottom: 25px;
     box-sizing: border-box;
   }
-  .c_brochure
-    form
+  .c_brochure_modal
+    .c_brochure_content
     .c_brochure_client
     .c_brochure_txtboxs
     .c_brochure_txtbox
     label {
     font-size: 1.15rem;
   }
-  .c_brochure
-    form
+  .c_brochure_modal
+    .c_brochure_content
     .c_brochure_client
     .c_brochure_txtboxs
     .c_brochure_txtbox
@@ -564,5 +635,4 @@ input#b_privacy_check:checked + label::before {
     height: 520px;
     margin: 150px auto;
   }
- 
 }

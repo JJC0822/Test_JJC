@@ -11,8 +11,8 @@
   <!-- reset -->
   <link rel="stylesheet" href="./common/css/reset.css">
   <!-- css -->
-  <link rel="stylesheet" href="./header.css">
-  <link rel="stylesheet" href="./footer.css">
+  <link rel="stylesheet" href="./common/css/header.css">
+  <link rel="stylesheet" href="./common/css/footer.css">
   <link rel="stylesheet" href="./contact.css">
 </head>
 
@@ -34,6 +34,16 @@
   <!-- contact -->
   <section class="contact">
     <h2 class="c_title">
+      <div>
+        <svg class="page_title_img" xmlns="http://www.w3.org/2000/svg" viewBox="-100 -10 450 180">
+          <path id="motion-path"
+            d="m 109.8016 63.394 c 60.6417 -35.0115 116.6596 -51.5156 125.1191 -36.8633 c 8.4595 14.6523 -33.8424 54.9132 -94.4841 89.9247 c -60.6417 35.0115 -116.6588 51.5151 -125.1191 36.8633 c -8.4595 -14.6523 33.8424 -54.9132 94.4841 -89.9247 z"
+            stroke="#EA5028" stroke-width="1" fill="#ffffff"></path>
+          <circle id="motion-target" fill="#EA5028" r="6.578" data-svg-origin="0 0"
+            transform="matrix(0.981,-0.19403,0.19403,0.981,205.88944,22.84978)"
+            style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        </svg>
+      </div>
       <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="-200 -4 730 105" class="page_title_txt">
         <g fill="#EA5028">
           <path
@@ -54,138 +64,120 @@
       </div>
     </div>
     <!-- QNA -->
-    <div class="smooth-scroll-container">
-      <div class="c_qna">
-        <a href="#" class="inner">
-          <p class="txt_color"><span class="txt_bold">프로젝트</span> 문의하기</p>
-          <img src="./images/contact-pencil.png" alt="연필 이미지" class="pencil">
-        </a>
-        <!-- QNA_menu -->
-        <form class="c_qna_menu">
-          <div class="c_qna_check">
-            <h4 class="txt_color txt_bold">어떤 유형의 프로젝트인가요?</h4>
-            <p>해당되는 항목을 선택해 주세요. <span class="txt_color">중복 선택 가능</span></p>
-            <div class="c_qna_checkboxs">
-              <label for="c_check_new">
-                <input type="checkbox" class="c_qna_check" id="c_check_new" name="new">
-                신규
-              </label>
-              <label for="c_check_renewal">
-                <input type="checkbox" class="c_qna_check" id="c_check_renewal" name="renewal">
-                리뉴얼
-              </label>
-              <label for="c_check_web">
-                <input type="checkbox" class="c_qna_check" id="c_check_web" name="web">
-                웹 사이트
-              </label>
-              <label for="c_check_micro">
-                <input type="checkbox" class="c_qna_check" id="c_check_micro" name="micro">
-                마이크로 사이트
-              </label>
-              <label for="c_check_brand">
-                <input type="checkbox" class="c_qna_check" id="c_check_brand" name="brand">
-                브랜드 사이트
-              </label>
-              <label for="c_check_mobile">
-                <input type="checkbox" class="c_qna_check" id="c_check_mobile" name="mobile">
-                모바일 앱
-              </label>
-              <label for="c_check_design">
-                <input type="checkbox" class="c_qna_check" id="c_check_design" name="design">
-                일러스트 디자인
-              </label>
-              <label for="c_check_photo">
-                <input type="checkbox" class="c_qna_check" id="c_check_photo" name="photo">
-                사진 및 영상 촬영
-              </label>
-              <label for="c_check_multiling">
-                <input type="checkbox" class="c_qna_check" id="c_check_multiling" name="multiling">
-                다국어
-              </label>
-              <label for="c_check_etc">
-                <input type="checkbox" class="c_qna_check" id="c_check_etc" name="etc">
-                기타
+    <div class="c_qna">
+      <a href="#" class="inner inner_qna_btn">
+        <p class="txt_color"><span class="txt_bold">프로젝트</span> 문의하기</p>
+        <img src="./images/contact-pencil.png" alt="연필 이미지" class="pencil">
+      </a>
+      <!-- QNA_menu -->
+      <form class="c_qna_menu">
+        <div class="c_qna_check">
+          <h4 class="txt_color txt_bold">어떤 유형의 프로젝트인가요?</h4>
+          <p>해당되는 항목을 선택해 주세요. <span class="txt_color">중복 선택 가능</span></p>
+          <div class="c_qna_checkboxs">
+            <input type="checkbox" class="c_qna_check" id="checkbox1" name="new">
+            <label for="checkbox1" class="pro_ckeck">신규</label>
+            <input type="checkbox" class="c_qna_check" id="checkbox2" name="renewal">
+            <label for="checkbox2" class="pro_ckeck">리뉴얼</label>
+            <input type="checkbox" class="c_qna_check" id="checkbox3" name="web">
+            <label for="checkbox3" class="pro_ckeck">웹 사이트</label>
+            <input type="checkbox" class="c_qna_check" id="checkbox4" name="micro">
+            <label for="checkbox4" class="pro_ckeck">마이크로 사이트</label>
+            <input type="checkbox" class="c_qna_check" id="checkbox5" name="brand">
+            <label for="checkbox5" class="pro_ckeck">브랜드 사이트</label>
+            <input type="checkbox" class="c_qna_check" id="checkbox6" name="mobile">
+            <label for="checkbox6" class="pro_ckeck">모바일 앱</label>
+            <input type="checkbox" class="c_qna_check" id="checkbox7" name="design">
+            <label for="checkbox7" class="pro_ckeck">일러스트 디자인
+            </label>
+            <input type="checkbox" class="c_qna_check" id="checkbox8" name="photo">
+            <label for="checkbox8" class="pro_ckeck">사진 및 영상 촬영
+            </label>
+            <input type="checkbox" class="c_qna_check" id="checkbox9" name="multiling">
+            <label for="checkbox9" class="pro_ckeck">다국어</label>
+            <input type="checkbox" class="c_qna_check" id="checkbox10" name="etc">
+            <label for="checkbox10" class="pro_ckeck">기타</label>
+          </div>
+        </div>
+        <div class="c_qna_projact">
+          <h4 class="txt_color txt_bold">프로젝트 정보를 알려주세요.</h4>
+          <div class="c_qna_txtboxs">
+            <div class="c_qna_txtbox">
+              <label class="txt_bold">
+                예상 일정(프로젝트 기간)</label><br>
+              <input type="text" class="c_qna_txt" placeholder="희망하시는 오픈 일정을 적어주세요. 예) 7월">
+            </div>
+            <div class="c_qna_txtbox">
+              <label class="txt_bold">
+                예산</label><br>
+              <input type="text" class="c_qna_txt" placeholder="책정된 예산을 입력해주세요. 예) 3,000만원">
+            </div>
+            <div class="c_qna_txtbox">
+              <label class="txt_bold">
+                홈페이지 URL <span class="txt_small txt_gray_color">선택사항 입니다</span></label><br>
+              <input type="text" class="c_qna_txt">
+            </div>
+            <div class="c_qna_txtbox">
+              <label class="txt_bold">
+                레퍼런스 URL <span class="txt_small txt_gray_color">선택사항 입니다</span>
+              </label><br>
+              <input type="text" class="c_qna_txt">
+            </div>
+            <div class="c_qna_txtbox c_textarea">
+              <label class="txt_bold">
+                상세내용</label><br>
+              <textarea name="text" id="text" placeholder="문의(의뢰) 관련 특이사항, 상세 내용 등을 적어주세요."></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="c_qna_client">
+          <h4 class="txt_color txt_bold">연락 받으실 분의 정보를 입력해주세요.</h4>
+          <div class="c_qna_txtboxs">
+            <div class="c_qna_txtbox">
+              <label class="txt_bold">
+                회사/단체명</label><br>
+              <input type="text" class="c_qna_txt company_name">
+            </div>
+            <div class="c_qna_txtbox">
+              <label class="txt_bold">
+                담당자명/직책</label><br>
+              <input type="text" class="c_qna_txt client_name">
+            </div>
+            <div class="c_qna_txtbox">
+              <label class="txt_bold">
+                연락처</label><br>
+              <input type="text" class="c_qna_txt tel">
+            </div>
+            <div class="c_qna_txtbox">
+              <label class="txt_bold">
+                이메일</label><br>
+              <input type="text" class="c_qna_txt email">
+            </div>
+            <div class="c_qna_txtbox privacy_check">
+              <input type="checkbox" id="privacy_check">
+              <label for="privacy_check">
+                <span class="txt_bold txt_small custom_checkbox">개인정보 처리방침<span class="txt_gray_color">에
+                    동의합니다.</span><a href="#"> [전문보기]</a></span>
               </label>
             </div>
           </div>
-          <div class="c_qna_projact">
-            <h4 class="txt_color txt_bold">프로젝트 정보를 알려주세요.</h4>
-            <div class="c_qna_txtboxs">
-              <div class="c_qna_txtbox">
-                <label class="txt_bold">
-                  예상 일정(프로젝트 기간)</label><br>
-                <input type="text" class="c_qna_txt" placeholder="희망하시는 오픈 일정을 적어주세요. 예) 7월">
-              </div>
-              <div class="c_qna_txtbox">
-                <label class="txt_bold">
-                  예산</label><br>
-                <input type="text" class="c_qna_txt" placeholder="책정된 예산을 입력해주세요. 예) 3,000만원">
-              </div>
-              <div class="c_qna_txtbox">
-                <label class="txt_bold">
-                  홈페이지 URL <span class="txt_small txt_gray_color">선택사항 입니다</span></label><br>
-                <input type="text" class="c_qna_txt">
-              </div>
-              <div class="c_qna_txtbox">
-                <label class="txt_bold">
-                  레퍼런스 URL <span class="txt_small txt_gray_color">선택사항 입니다</span>
-                </label><br>
-                <input type="text" class="c_qna_txt">
-              </div>
-              <div class="c_qna_txtbox c_textarea">
-                <label class="txt_bold">
-                  상세내용</label><br>
-                <textarea name="text" id="text" placeholder="문의(의뢰) 관련 특이사항, 상세 내용 등을 적어주세요."></textarea>
-              </div>
-            </div>
-          </div>
-          <div class="c_qna_client">
-            <h4 class="txt_color txt_bold">연락 받으실 분의 정보를 입력해주세요.</h4>
-            <div class="c_qna_txtboxs">
-              <div class="c_qna_txtbox">
-                <label class="txt_bold">
-                  회사/단체명</label><br>
-                <input type="text" class="c_qna_txt company_name">
-              </div>
-              <div class="c_qna_txtbox">
-                <label class="txt_bold">
-                  담당자명/직책</label><br>
-                <input type="text" class="c_qna_txt client_name">
-              </div>
-              <div class="c_qna_txtbox">
-                <label class="txt_bold">
-                  연락처</label><br>
-                <input type="text" class="c_qna_txt tel">
-              </div>
-              <div class="c_qna_txtbox">
-                <label class="txt_bold">
-                  이메일</label><br>
-                <input type="text" class="c_qna_txt email">
-              </div>
-              <div class="c_qna_txtbox privacy_check">
-                <input type="checkbox" id="privacy_check">
-                <label for="privacy_check">
-                  <span class="txt_bold txt_small custom_checkbox">개인정보 처리방침<span class="txt_gray_color">에
-                      동의합니다.</span><a href="#"> [전문보기]</a></span>
-                </label>
-              </div>
-            </div>
-          </div>
-          <div class="c_btns">
-            <button type="submit" class="c_btn submit_btn">문의사항 전송</button>
-            <button type="reset" class="c_btn reset_btn">취소</button>
-          </div>
-        </form>
-      </div>
-      <!-- brochure -->
-      <div class="c_brochure">
-        <a href="#" class="inner">
-          <p class="txt_color"><span class="txt_bold">브로슈어</span> 신청하기</p>
-          <img src="./images/contact-memo.png" alt="메모 이미지">
-        </a>
-        <form>
+        </div>
+        <div class="c_btns">
+          <button type="submit" class="c_btn submit_btn">문의사항 전송</button>
+          <button type="reset" class="c_btn reset_btn">취소</button>
+        </div>
+      </form>
+    </div>
+    <!-- brochure -->
+    <div class="c_brochure">
+      <a href="#" class="inner inner_brochur_btn">
+        <p class="txt_color"><span class="txt_bold">브로슈어</span> 신청하기</p>
+        <img src="./images/contact-memo.png" alt="메모 이미지">
+      </a>
+      <div class="c_brochure_modal">
+        <form class="c_brochure_content">
           <div class="c_brochure_client">
-            <button class="brochure_close_btn"><img src="./images/sitemap_close.png" alt="브로슈어 신청 닫기 버튼"></button>
+            <a class="brochure_close_btn"><img src="./images/sitemap_close.png" alt="브로슈어 신청 닫기 버튼"></a>
             <h4 class="txt_color">브로슈어 신청하기</h4>
             <div class="c_brochure_txtboxs">
               <div class="c_brochure_txtbox">
@@ -226,6 +218,7 @@
     <!-- map -->
     <div class="c_map" id="c_map"></div>
   </section>
+
   <!-- footer -->
   <footer>
     <div class="f_txt">
