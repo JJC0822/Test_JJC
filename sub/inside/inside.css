@@ -3,51 +3,6 @@
 body {
   font-family: "Pretendard Variable", "Malgun Gothic", sans-serif;
 }
-/* header */
-header {
-  background-color: transparent;
-  position: sticky;
-  top: 0;
-  margin-bottom: 1px;
-  z-index: 1;
-}
-.h_top {
-  display: flex;
-  padding: 20px 20px;
-  justify-content: space-between;
-  align-items: center;
-}
-.h_logo,
-.h_nav_icon {
-  width: 32px;
-}
-.h_pc_menu {
-  display: none;
-}
-.nav_icon {
-  display: block;
-  width: 25px;
-  height: 2.2px;
-  background-color: #ea5028;
-  position: relative;
-}
-.nav_icon::after {
-  content: "";
-  width: 15px;
-  height: 2.2px;
-  background-color: #ea5028;
-  position: absolute;
-  top: -9px;
-}
-.nav_icon::before {
-  content: "";
-  width: 15px;
-  height: 2.2px;
-  background-color: #ea5028;
-  position: absolute;
-  top: 9px;
-  left: 10px;
-}
 /* main */
 .i_svg {
   text-align: center;
@@ -163,90 +118,10 @@ header {
 .i_hum img:nth-child(2) {
   display: none;
 }
-/* footer */
-.footer {
-  background-color: #ea5028;
-  color: white;
-  text-align: center;
-}
-.f_txt {
-  padding: 30px;
-  font-weight: 300;
-  font-size: 0.9rem;
-  line-height: 1.2;
-}
-.f_txt p {
-  font-size: 0.8rem;
-}
-
-.family button {
-  border-radius: 50px;
-  outline: none;
-  border: none;
-  padding: 1.8% 3%;
-  font-size: 0.7rem;
-  color: #ea5028;
-}
-
-.top_btn {
-  border: 1px solid #ea5028;
-  background-color: #fff;
-  padding: 1%;
-  position: fixed;
-  bottom: 70px;
-  right: 15px;
-}
 
 /* pc */
 
 @media (width >= 1200px) {
-  /* header */
-  .header {
-    padding: 1% 3% 0;
-  }
-  .c_pc_txt {
-    display: inline;
-  }
-  /* header */
-  .header {
-    padding-top: 10px;
-  }
-  .h_pc_menu {
-    display: flex;
-    gap: 60px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-transform: capitalize;
-    color: #ea5028;
-  }
-  .h_logo,
-  .h_nav_icon {
-    width: 65px;
-  }
-  .nav_icon {
-    display: block;
-    width: 40px;
-    height: 4px;
-    background-color: #ea5028;
-    position: relative;
-  }
-  .nav_icon::after {
-    content: "";
-    width: 20px;
-    height: 4px;
-    background-color: #ea5028;
-    position: absolute;
-    top: -13px;
-  }
-  .nav_icon::before {
-    content: "";
-    width: 20px;
-    height: 4px;
-    background-color: #ea5028;
-    position: absolute;
-    top: 13px;
-    left: 32px;
-  }
 
   /* main */
   .inside {
@@ -376,40 +251,5 @@ header {
     width: 208px;
     right: 420px;
   }
-  /* footer */
-  .footer {
-    position: relative;
-  }
-  .f_txt {
-    padding: 20px 80px;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-  }
-  .f_txt p,
-  .f_txt a,
-  .family button {
-    font-size: 1rem;
-  }
-  .family {
-    position: absolute;
-    top: 12px;
-    right: 80px;
-  }
-  .family button {
-    padding: 6px 18px;
-    margin-bottom: 0;
-    color: #ea5028;
-  }
 
-  .top_btn {
-    border: 1px solid #ea5028;
-    background-color: #fff;
-    padding: 0.8%;
-    position: fixed;
-    bottom: 70px;
-    right: 75px;
-  }
 }
