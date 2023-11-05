@@ -52,27 +52,6 @@ gsap.to(".c_map", {
   },
 });
 // header side menu
-const menu = document.querySelector(".s_menu");
-const btn = menu.querySelector(".s_nav-tgl");
-const sub = document.querySelector(".s_nav ul");
-
-btn.addEventListener("click", (evt) => {
-  menu.classList.toggle("active");
-});
-
-let isMenuOpen = false; // 초기에 메뉴는 닫힌 상태
-
-btn.addEventListener("click", (evt) => {
-  isMenuOpen = !isMenuOpen; // 메뉴 상태를 열린/닫힌으로 토글
-
-  if (isMenuOpen) {
-    menu.classList.add("active");
-    sub.style.display = "block";
-  } else {
-    menu.classList.remove("active");
-    sub.style.display = "none";
-  }
-});
 
 // QNA
 const innerQnaBtn = document.querySelector(".inner_qna_btn");
@@ -131,7 +110,7 @@ map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
 // 마커 이미지의 주소
 const markerImageUrl =
-    "https://jjc0822.github.io/Test_JJC/sub/contact/imgase/logo.svg",
+    "https://jjc0822.github.io/Test_JJC/sub/contact/images/logo.svg",
   markerImageSize = new kakao.maps.Size(40, 42), // 마커 이미지의 크기
   markerImageOptions = {
     offset: new kakao.maps.Point(20, 42), // 마커 좌표에 일치시킬 이미지 안의 좌표
