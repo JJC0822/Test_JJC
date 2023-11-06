@@ -36,12 +36,13 @@
     <h2 class="c_title">
       <div>
         <svg class="page_title_img" xmlns="http://www.w3.org/2000/svg" viewBox="-100 -10 450 180">
-          <path id="motion-path"
+          <path id="motion_path"
             d="m 109.8016 63.394 c 60.6417 -35.0115 116.6596 -51.5156 125.1191 -36.8633 c 8.4595 14.6523 -33.8424 54.9132 -94.4841 89.9247 c -60.6417 35.0115 -116.6588 51.5151 -125.1191 36.8633 c -8.4595 -14.6523 33.8424 -54.9132 94.4841 -89.9247 z"
             stroke="#EA5028" stroke-width="1" fill="#ffffff"></path>
-          <circle id="motion-target" fill="#EA5028" r="6.578" data-svg-origin="0 0"
+          <circle id="motion_target" fill="#EA5028" r="6.578" data-svg-origin="0 0"
             transform="matrix(0.981,-0.19403,0.19403,0.981,205.88944,22.84978)"
-            style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+            style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;">
+          </circle>
         </svg>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="-200 -4 730 105" class="page_title_txt">
@@ -163,7 +164,7 @@
             </div>
           </div>
         </div>
-        <div class="c_btns">
+        <div class="c_btns c_qna_btns">
           <button type="submit" class="c_btn submit_btn">문의사항 전송</button>
           <button type="reset" class="c_btn reset_btn">취소</button>
         </div>
@@ -234,15 +235,16 @@
     </div>
   </footer>
 
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/ScrollTrigger.min.js"></script>
   <!-- header menu scroll -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <!-- title motionPath -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
   <!-- map -->
   <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=080a6a97409440c3d4425bfc6ba87955"></script>
-
   <!-- js -->
   <script src="./contact.js"></script>
 </body>
