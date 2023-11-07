@@ -3,6 +3,7 @@
 body {
   font-family: "Pretendard Variable", "Malgun Gothic", sans-serif;
 }
+
 /* main */
 .i_svg {
   padding-top: 15%;
@@ -119,6 +120,8 @@ body {
 .i_hum img:nth-child(2) {
   display: none;
 }
+
+
 
 /* pc */
 
