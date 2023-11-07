@@ -1,69 +1,327 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>title</title>
-  <!-- og -->
-  <meta property="og:title" content="JCC">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:description" content="">
-  <meta property="og:type" content="">
-  <!-- font -->
-  <link rel="stylesheet" href="./common/css/font.css">
-  <!-- reset -->
-  <link rel="stylesheet" href="./common/css/reset.css">
-  <!-- css -->
-  <link rel="stylesheet" href="./common/css/header.css">
-  <link rel="stylesheet" href="./main-h.css">
-</head>
-<body>
-<!-- header -->
-<header>
-  <div class="h_top">
-    <h2 class="h_logo">
-      <a href="#"><img src="./images/inside/logo.svg" alt="로고" ></a>
-    </h2>
-    <menu class="h_pc_menu">
-      <li><a href="#">works</a></li>
-      <li><a href="#">about</a></li>
-      <li><a href="#">contact</a></li>
-      <li><a href="#">inside</a></li>
-    </menu>
-    <nav class="h_nav_icon">
-      <a href="#"><span class="nav_icon"></span></a>
-    </nav>
-  </div>
-</header>
-  <div class="h_main">
-    <ul class="h_txt">
-      <li>
-        <h1>fun</h1>
-      </li>
-      <li><p>creative</p></li>
-      <li>
-        <h1 id="color">m.funch</h1>
-      </li>
-    </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <!-- og -->
+    <meta property="og:title" content="JCC" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="" />
+    <!-- font -->
+    <link rel="stylesheet" href="./common/css/font.css" />
+    <!-- reset -->
+    <link rel="stylesheet" href="./common/css/reset.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="./common/css/header.css" />
+    <link rel="stylesheet" href="./main-h.css" />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <div class="h_top">
+        <h2 class="h_logo">
+          <a href="#"><img src="./images/inside/logo.svg" alt="로고" /></a>
+        </h2>
+        <menu class="h_pc_menu">
+          <li><a href="#">works</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">contact</a></li>
+          <li><a href="#">inside</a></li>
+        </menu>
+        <nav class="h_nav_icon">
+          <a href="#"><span class="nav_icon"></span></a>
+        </nav>
+      </div>
+    </header>
+    <div class="h_main">
+      <ul class="h_txt">
+        <li>
+          <h1>fun</h1>
+        </li>
+        <li><p>creative</p></li>
+        <li>
+          <h1 id="color">m.funch</h1>
+        </li>
+      </ul>
       <div class="meteor">
-      <img src="./images/main/meteor-img3.svg" alt="유성 이미지" id="m_1">
-      <img src="./images/main/meteor-img1.svg" alt="유성 이미지" id="m_2">
-      <img src="./images/main/meteor-img2.svg" alt="유성 이미지" id="m_3">
-      <img src="./images/main/meteor-img4.svg" alt="유성 이미지" id="m_4">
+        <img src="./images/main/meteor-img3.svg" alt="유성 이미지" id="m_1" />
+        <img src="./images/main/meteor-img1.svg" alt="유성 이미지" id="m_2" />
+        <img src="./images/main/meteor-img2.svg" alt="유성 이미지" id="m_3" />
+        <img src="./images/main/meteor-img4.svg" alt="유성 이미지" id="m_4" />
       </div>
       <div class="h_img">
-      <img src="./images/main/astronaut-img.svg" alt="우주선 & 우주인 이미지" id="h1">
-      <img src="./images/main/planet-group-m.svg" alt="모바일 행성표면 & 우주인 이미지" id="h2">
-      <img src="./images/main/planet-group.svg" alt="행성표면 & 우주인 이미지" id="h3">
-      <img src="./images/main/mv-title-icon.svg" alt="부유하는 우주인" id="h4">
+        <img
+          src="./images/main/astronaut-img.svg"
+          alt="우주선 & 우주인 이미지"
+          id="h1"
+        />
+        <img
+          src="./images/main/planet-group-m.svg"
+          alt="모바일 행성표면 & 우주인 이미지"
+          id="h2"
+        />
+        <img
+          src="./images/main/planet-group.svg"
+          alt="행성표면 & 우주인 이미지"
+          id="h3"
+        />
+        <img
+          src="./images/main/mv-title-icon.svg"
+          alt="부유하는 우주인"
+          id="h4"
+        />
+        <img src="./images/main/download.svg" alt="구름" class="cloud" />
+      </div>
+      <div class="h_bg">
+        <img src="./images/main/overlap-ground.svg" alt="pc오버랩" id="pc_bg" />
+        <img
+          src="./images/main/overlap-ground-m.svg"
+          alt="모바일 오버랩"
+          id="m_bg"
+        />
+      </div>
     </div>
-    <div class="h_bg">
-      <img src="./images/main/overlap-ground.svg" alt="pc오버랩" id="pc_bg">
-      <img src="./images/main/overlap-ground-m.svg" alt="모바일 오버랩" id="m_bg">
+
+    <!-- 구름 -->
+
+    <!--      구름 부분 수정해야 돼요... 그리드랑 붙어야 되는데 안 붙고 뒤에 이상한 잔상 있음        -->
+    <div class="cloud">
+      <img src="./images/main/download.svg" alt="구름" />
     </div>
-  </div>
-<script src="./main-h.js"></script>
-</body>
+    <!--  그리드  -->
+    <section class="smooth-scroll-container">
+      <div class="m_item_wrap">
+        <div class="m_grid">
+          <div class="m_url group1 url_1">
+            <div class="m_urlImg urlImg_1">
+              <a href="#" class="m_Img Img_1 circleType">
+                <img
+                  src="./images/main/works_thumb_024.jpg"
+                  alt="국립한국농수산대학교"
+                />
+                <img
+                  src="./images/main/works_thumb_logo_024.png"
+                  class="m_hidden"
+                  alt="국립한국농수산대학교_logo"
+                />
+              </a>
+            </div>
+            <p>국립한국농수산대학교 마이크로사이트</p>
+          </div>
+          <div class="m_url group1 url_2">
+            <div class="m_urlImg urlImg_2">
+              <a href="#" class="m_Img Img_2">
+                <img src="./images/main/works_thumb_023.jpg" alt="엔구" />
+                <img
+                  src="./images/main/works_thumb_logo_023.png"
+                  class="m_hidden"
+                  alt="엔구_logo"
+                />
+              </a>
+            </div>
+            <p>엔구 화상영어</p>
+          </div>
+          <div class="m_url group1 url_3">
+            <div class="m_urlImg urlImg_3">
+              <a href="#" class="m_Img Img_3 rhombusType">
+                <img src="./images/main/works_thumb_001.jpg" alt="국보디자인" />
+                <img
+                  src="./images/main/works_thumb_logo_001.png"
+                  class="m_hidden"
+                  alt="국보디자인_logo"
+                />
+              </a>
+            </div>
+            <p>국보디자인</p>
+          </div>
+          <div class="m_url group1 url_4">
+            <div class="m_urlImg urlImg_4">
+              <a href="#" class="m_Img Img_4 pentagonType">
+                <img src="./images/main/works_thumb_002.jpg" alt="SV 캠페인" />
+                <img
+                  src="./images/main/works_thumb_logo_002.png"
+                  class="m_hidden"
+                  alt="캠페인_logo"
+                />
+              </a>
+            </div>
+            <p>SV 캠페인 마이크로 사이트&굿즈</p>
+          </div>
+          <div class="m_url group2 url_5">
+            <div class="m_urlImg urlImg_5">
+              <a href="#" class="m_Img Img_5 rhombusType">
+                <img
+                  src="./images/main/works_thumb_003.jpg"
+                  alt="놀이터를 지켜라"
+                />
+                <img
+                  src="./images/main/works_thumb_logo_003.png"
+                  class="m_hidden"
+                  alt="놀이터_logo"
+                />
+              </a>
+            </div>
+            <p>놀이터를 지켜라</p>
+          </div>
+          <div class="m_url group2 url_6">
+            <div class="m_urlImg urlImg_6">
+              <a href="#" class="m_Img Img_6">
+                <img src="./images/main/works_thumb_004.jpg" alt="유니세프" />
+                <img
+                  src="./images/main/works_thumb_logo_004.png"
+                  class="m_hidden"
+                  alt="유니세프_logo"
+                />
+              </a>
+            </div>
+            <p>유니세프 '유산기부' 캠페인</p>
+          </div>
+          <div class="m_url group2 url_7">
+            <div class="m_urlImg urlImg_7">
+              <a href="#" class="m_Img Img_7 pentagonType">
+                <img
+                  src="./images/main/works_thumb_019.jpg"
+                  alt="파크시스템스"
+                />
+                <img
+                  src="./images/main/works_thumb_logo_019.png"
+                  class="m_hidden"
+                  alt="파크시스템스_logo"
+                />
+              </a>
+            </div>
+            <p>파크시스템스</p>
+          </div>
+          <div class="m_url group2 url_8">
+            <div class="m_urlImg urlImg_8">
+              <a href="#" class="m_Img Img_8">
+                <img
+                  src="./images/main/works_thumb_005.jpg"
+                  alt="어나더바이브"
+                />
+                <img
+                  src="./images/main/works_thumb_logo_005.png"
+                  class="m_hidden"
+                  alt="어나더바이브_logo"
+                />
+              </a>
+            </div>
+            <p>어나더바이브</p>
+          </div>
+          <div class="m_url group3 url_9">
+            <div class="m_urlImg urlImg_9">
+              <a href="#" class="m_Img Img_9 pentagonType">
+                <img src="./images/main/works_thumb_006.jpg" alt="한컴" />
+                <img
+                  src="./images/main/works_thumb_logo_006.png"
+                  class="m_hidden"
+                  alt="한컴_logo"
+                />
+              </a>
+            </div>
+            <p>한컴 싸인</p>
+          </div>
+          <div class="m_url group3 url_10">
+            <div class="m_urlImg urlImg_10">
+              <a href="#" class="m_Img Img_10 circleType">
+                <img src="./images/main/works_thumb_007.jpg" alt="DeArt82" />
+                <img
+                  src="./images/main/works_thumb_logo_007.png"
+                  class="m_hidden"
+                  alt="DeArt82_logo"
+                />
+              </a>
+            </div>
+            <p>DeArt82</p>
+          </div>
+          <div class="m_url group3 url_11">
+            <div class="m_urlImg urlImg_11">
+              <a href="#" class="m_Img Img_11 rhombusType">
+                <img src="./images/main/works_thumb_008.jpg" alt="국제어린이" />
+                <img
+                  src="./images/main/works_thumb_logo_008.png"
+                  class="m_hidden"
+                  alt="국제어린이_logo"
+                />
+              </a>
+            </div>
+            <p>국제어린이 마라톤 ('20~22')</p>
+          </div>
+          <div class="m_url group3 url_12">
+            <div class="m_urlImg urlImg_12">
+              <a href="#" class="m_Img Img_12">
+                <img src="./images/main/works_thumb_021.jpg" alt="CES" />
+                <img
+                  src="./images/main/works_thumb_logo_021.png"
+                  class="m_hidden"
+                  alt="CES_logo"
+                />
+              </a>
+            </div>
+            <p>CES 2022 PnD Prototypr App</p>
+          </div>
+          <div class="m_url group4 url_13">
+            <div class="m_urlImg urlImg_13">
+              <a href="#" class="m_Img Img_13 circleType">
+                <img src="./images/main/works_thumb_009.jpg" alt="TuneH" />
+                <img
+                  src="./images/main/works_thumb_logo_009.png"
+                  class="m_hidden"
+                  alt="TuneH_logo"
+                />
+              </a>
+            </div>
+            <p>Tune H</p>
+          </div>
+          <div class="m_url group4 url_14">
+            <div class="m_urlImg urlImg_14">
+              <a href="#" class="m_Img Img_14">
+                <img src="./images/main/works_thumb_010.jpg" alt="자이스" />
+                <img
+                  src="./images/main/works_thumb_logo_010.png"
+                  class="m_hidden"
+                  alt="자이스_logo"
+                />
+              </a>
+            </div>
+            <p>자이스 비전케어</p>
+          </div>
+          <div class="m_url group4 url_15">
+            <div class="m_urlImg urlImg_15">
+              <a href="#" class="m_Img Img_15 pentagonType">
+                <img src="./images/main/works_thumb_012.jpg" alt="혁신박람회" />
+                <img
+                  src="./images/main/works_thumb_logo_012.png"
+                  class="m_hidden"
+                  alt="혁신박람회_logo"
+                />
+              </a>
+            </div>
+            <p>대한민국 혁신박람회, 2021</p>
+          </div>
+          <div class="m_url group4 url_16">
+            <div class="m_urlImg urlImg_16">
+              <a href="#" class="m_Img Img_16 circleType">
+                <img src="./images/main/works_thumb_022.jpg" alt="K-Ventures" />
+                <img
+                  src="./images/main/works_thumb_logo_022.png"
+                  class="m_hidden"
+                  alt="K-Ventures_logo"
+                />
+              </a>
+            </div>
+            <p>K-Ventures</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./main.js"></script>
+    <script src="./main-h.js"></script>
+  </body>
 </html>
