@@ -13,6 +13,7 @@ body {
   transform: translateX(-50%);
   background-repeat: repeat-x;
   background-position: top;
+  background-image: url(./images/main/download.svg);
   animation: cloud-ani 50s linear infinite;
 }
 @keyframes cloud-ani {
@@ -43,6 +44,7 @@ body {
 }
 
 .m_item_wrap {
+  background-color: ;
   z-index: 1;
   width: 100%;
   max-width: 1440px;

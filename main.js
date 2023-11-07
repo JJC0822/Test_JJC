@@ -1,4 +1,4 @@
-const cloud = document.querySelector(".cloud");
+
 const container = document.querySelector(".smooth-scroll-container");
 const group1 = document.querySelector(".group1");
 const group2 = document.querySelector(".group2");
