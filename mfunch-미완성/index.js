@@ -51,7 +51,7 @@ const h_bg = document.querySelector("#pc_bg");
 const h_bg_m = document.querySelector("#m_bg");
 
 addEventListener("scroll", () => {
-  h_bg.style.transform = `translateY(${scrollY / 8}px)`;
+  h_bg.style.transform = `translateY(-${scrollY / 8}px)`;
 });
 addEventListener("scroll", () => {
   h_bg_m.style.transform = `translateY(-${scrollY / 8}px)`;

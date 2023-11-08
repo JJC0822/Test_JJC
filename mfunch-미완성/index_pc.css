@@ -17,6 +17,23 @@
   .main_intro .intro_bg .m_bg {
     display: none;
   }
+  .main_intro .intro_bg {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+  }
+  .intro_bg #pc_bg {
+    display: block;
+    position: absolute;
+    top: 1000px;
+    left: -1000px;
+    z-index: 10;
+    height: 70%;
+    transition: 0.5s;
+  
+  }
+
+
   .intro_imgs img #h3 {
     transition: 0.2s;
     width: 100%;
@@ -92,16 +109,6 @@
     left: 24%;
     transition: 0.2s;
     width: 100px;
-  }
-  .intro_bg #pc_bg {
-    transition: 0.8s;
-    display: block;
-    position: absolute;
-    width: 100%;
-    top: 400px;
-    left: -600px;
-    transform: translateY(100px);
-    
   }
 
   /*** works ***/
