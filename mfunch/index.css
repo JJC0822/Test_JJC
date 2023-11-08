@@ -7,6 +7,11 @@ button {
     "Malgun Gothic", "맑은 고딕", "Apple SD Gothic Neo", sans-serif;
   /* min-width: 280px; */
 }
+
+body {
+  height: 200vh;
+}
+
 .txt_bold {
   font-weight: 700;
 }
@@ -33,11 +38,17 @@ button {
   overflow: hidden;
   /* position: sticky;
   top: 0; */
+  position: sticky;
+  top: 0;
   background-color: #000;
   background-image: url(./images/star-tile.svg);
   padding-top: 15%;
-  height: 100vh;
+  height: 200vh;
   margin-bottom: 100px;
+}
+.hide {
+  position: sticky;
+  z-index: 100;
 }
 .main_intro .intro_txt {
   color: white;
@@ -53,7 +64,7 @@ button {
   font-size: 3.3rem;
 }
 .main_intro .intro_bg .pc_bg {
-  display: none;
+  display: none; 
 }
 .main_intro .intro_bg .m_bg {
   display: block;
@@ -61,8 +72,9 @@ button {
 
 .main_intro .intro_bg {
   position: sticky;
-  top: 0;
-  height: 100vh;
+  z-index: 1;
+  bottom: 0;
+  height: 110vh;
 }
 
 .meteor_wrap {
@@ -94,6 +106,8 @@ button {
 }
 .intro_imgs {
   width: 100%;
+  position: sticky;
+  z-index: 10;
 }
 .intro_imgs img:nth-child(1) {
   width: 240px;
@@ -111,9 +125,17 @@ button {
 }
 
 /*** works ***/
+/* section.works {
+  background-color: #fff;
+  position: sticky;
+  z-index: 10;
+} */
+
 .w_wrap {
   /* background-color: ; */
-  z-index: 100;
+  background-color: #fff;
+  position: sticky;
+  z-index: 10;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
@@ -236,6 +258,7 @@ button {
   /* overflow: hidden; */
 }
 .a_container {
+
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -246,6 +269,7 @@ button {
 }
 /* about 궤도 */
 .a_container .a_circle_wrap {
+  
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -327,8 +351,12 @@ button {
 
 /*** contact ***/
 .contact {
+  background-color: #fff;
+
   z-index: 10;
   overflow: hidden;
+  height: 100%;
+  position: sticky;
 }
 .contact .c_img img {
   display: block;
