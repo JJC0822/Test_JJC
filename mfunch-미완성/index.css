@@ -65,7 +65,8 @@ button {
 .main_intro .intro_bg .m_bg {
   display: block;
   position: relative;
-  top: 750px;
+  /* 790px로 하면 화면을 키워도 괜찮 */
+  top: 650px;
   z-index: 10;
   height: 100%;
   transition: 0.5s;
@@ -74,6 +75,7 @@ button {
   뒷배경을 띄우면ㅁ 여백이 생기고 ㅇ집ㅈ더ㅏㅣㅈㄷㅂ
   새벽 3시45분 해결ㄴ이;ㅁㄴㅇㅁ
 */
+/* 부모요소 absolute로 해결 */
 .main_intro .intro_bg {
   z-index: 1;
   position: absolute;
