@@ -69,3 +69,8 @@
 - js - '프로젝트 문의하기' toggle창이 순차적으로 동작하게 함  
    => 유형 선택 후 -> 프로젝트 관련 작성할 수 있게 하고 작성을 완료하면 -> 클라이언트의 정보를 입력하는 순서
 - js - title bg_img motionPath 시도 실패
+
+### 231109
+
+- html/css - header 부분에 메뉴 아이콘이 작동하는 html 구조와 css로 변경
+- js - header toggl창 추가
