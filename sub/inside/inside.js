@@ -150,3 +150,17 @@ calculateValues();
 toggleBtn.addEventListener('click', toggleMenu, false);
 window.addEventListener("resize", resizeHandler, false);
 
+// footer family
+
+
+const fClose = document.querySelector('.family_close span')
+const fSubBg= document.querySelector('.family_bg')
+const fOpen = document.querySelector('.family button')
+
+fClose.addEventListener('click',() => {
+  fSubBg.style.display = 'none'
+})
+
+fOpen.addEventListener('click',() => {
+  fSubBg.style.display = 'block'
+})
