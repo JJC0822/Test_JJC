@@ -24,14 +24,12 @@ const meteor2 = document.querySelector("#m_2");
 const meteor3 = document.querySelector("#m_3");
 const meteor4 = document.querySelector("#m_4");
 const h1 = document.querySelector("#h1");
-const h2 = document.querySelector("#h2");
 const h3 = document.querySelector("#h3");
 const h4 = document.querySelector("#h4");
 addEventListener("mousemove", (e) => {
   //마우스의 실시간 좌표확인
   let x = e.clientX;
   let y = e.clientY;
-  console.log(x, y);
   meteor1.style.transform = `translate(${-x / -50}px, ${
     y / 70 + 10
   }px) rotate(15deg)`;
@@ -45,7 +43,6 @@ addEventListener("mousemove", (e) => {
     y / 70 + 10
   }px)  rotate(15deg)`;
   h1.style.transform = `translate(${-x / -50}px, ${y / 70 + 10}px)`;
-  h2.style.transform = `translate(${30 - x / 60}px, ${40 - y / 50}px)`;
   h3.style.transform = `translate(${30 - x / 60}px, ${40 - y / 50}px)`;
   h4.style.transform = `translate(${30 - x / 60}px, ${y / 50}px)`;
 });
@@ -60,8 +57,21 @@ addEventListener("scroll", () => {
   h_bg_m.style.transform = `translateY(-${scrollY / 8}px)`;
 });
 
+//스크롤 이벤트
+const container = document.querySelector(".smooth-scroll-container");
+
+gsap.to(".smooth-scroll-item", {
+  y: -500, // 원하는 애니메이션 효과 설정
+  scrollTrigger: {
+    trigger: container,
+    start: "top top", // 트리거가 언제 시작될지 설정
+    end: "bottom bottom", // 트리거가 언제 끝날지 설정
+    scrub: 2, // 스크롤 속도에 따라 애니메이션을 부드럽게 조절 (1은 100% 부드러움)
+  },
+});
+
 // works
-gsap;
+/* gsap;
 const cloud = document.querySelector(".cloud");
 const container = document.querySelector(".smooth-scroll-container");
 const group1 = document.querySelector(".group1");
@@ -118,7 +128,7 @@ ScrollTrigger.matchMedia({
     });
   },
   // all: function () {},
-});
+}); */
 
 //토글메뉴---------------------------------------------------------------------------------------------
 

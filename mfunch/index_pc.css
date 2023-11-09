@@ -17,6 +17,23 @@
   .main_intro .intro_bg .m_bg {
     display: none;
   }
+  .main_intro .intro_bg {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+  }
+  .intro_bg #pc_bg {
+    display: block;
+    position: absolute;
+    top: 1000px;
+    left: -1000px;
+    z-index: 10;
+    height: 70%;
+    transition: 0.5s;
+  
+  }
+
+
   .intro_imgs img #h3 {
     transition: 0.2s;
     width: 100%;
@@ -63,6 +80,10 @@
     width: 150px;
   }
 
+  .intro_imgs {
+    position: relative;
+  }
+
   .intro_imgs img:nth-child(1) {
     transition: 0.2s;
     width: 240px;
@@ -72,9 +93,14 @@
   }
   .intro_imgs img:nth-child(2) {
     transition: 0.2s;
-
     width: 100%;
+    display: none;
+  }
+  .intro_imgs img:nth-child(3) {
     display: block;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
   }
   .intro_imgs img:nth-child(4) {
     display: block;
@@ -83,17 +109,6 @@
     left: 24%;
     transition: 0.2s;
     width: 100px;
-  }
-  .intro_bg #m_bg {
-    display: none;
-  }
-  .intro_bg #pc_bg {
-    transition: 0.8s;
-    display: block;
-    position: absolute;
-    top: 400px;
-    left: -600px;
-    transform: translateY(100px);
   }
 
   /*** works ***/
