@@ -30,7 +30,7 @@ const i_info3 = document.querySelector(".boo");
 
 // ScrollTrigger를 사용하여 요소를 트리거하고 애니메이션을 정의
 gsap.to(".smooth-scroll-item", {
-  y: -500, // 원하는 애니메이션 효과 설정
+  y: -300, // 원하는 애니메이션 효과 설정
   scrollTrigger: {
     trigger: container,
     start: "top top", // 트리거가 언제 시작될지 설정
@@ -85,48 +85,46 @@ gsap.to(".i_boo", {
   },
 });
 
-
-
-
 //토글메뉴 **************************************************************************************************
-const elem = document.querySelector('#nav-bg'),
-      toggleBtn = document.querySelector('#toggle-btn'),
-      elemH = elem.getBoundingClientRect().height,
-      elemW = elem.getBoundingClientRect().width;
+const elem = document.querySelector("#nav-bg"),
+  toggleBtn = document.querySelector("#toggle-btn"),
+  elemH = elem.getBoundingClientRect().height,
+  elemW = elem.getBoundingClientRect().width;
 
 let open = false;
 let scale, offsetX, offsetY;
 
-const calculateValues = (() => {
+const calculateValues = () => {
   const w = window.innerWidth;
   const h = window.innerHeight;
   //const cssStyles = getComputedStyle(elem);
   //const offsetValue = Number(cssStyles.getPropertyValue('--offset-value'));
-  const offsetValue = Number(getComputedStyle(elem).getPropertyValue('--offset-value'));
+  const offsetValue = Number(
+    getComputedStyle(elem).getPropertyValue("--offset-value")
+  );
 
   //  Offsets to center the circle
-/*   offsetX = (w/2) - (elemW/2) - offsetValue;
+  /*   offsetX = (w/2) - (elemW/2) - offsetValue;
   offsetY = (h/2) - (elemH/2) - offsetValue; */
   offsetX = 50; // 가로 위치 (픽셀)
-  offsetY = 10;  // 세로 위치 (픽셀)
+  offsetY = 10; // 세로 위치 (픽셀)
 
   // Good old pythagoras
-  const radius = Math.sqrt((h ** 2)+(w ** 2));
-  scale = radius/(elemW/2)/1 + .1; // Add '.1' to compensate for Safari sub pixel blur issue
+  const radius = Math.sqrt(h ** 2 + w ** 2);
+  scale = radius / (elemW / 2) / 1 + 0.1; // Add '.1' to compensate for Safari sub pixel blur issue
   return scale;
-})
-
+};
 
 const openMenu = () => {
   elem.style.setProperty("--translate-x", `${offsetX}px`);
   elem.style.setProperty("--translate-y", `-${offsetY}px`);
   elem.style.setProperty("--scale", scale);
-}
+};
 const closeMenu = () => {
   elem.style.setProperty("--scale", 1);
   elem.style.setProperty("--translate-x", 0);
   elem.style.setProperty("--translate-y", 0);
-}
+};
 const animateMenu = () => {
   open ? openMenu() : closeMenu();
 };
@@ -134,33 +132,31 @@ const animateMenu = () => {
 const toggleMenu = () => {
   open = !open;
   animateMenu();
-  toggleBtn.classList.toggle('shown');
-}
+  toggleBtn.classList.toggle("shown");
+};
 
-const resizeHandler = () => { 
+const resizeHandler = () => {
   window.requestAnimationFrame(() => {
     calculateValues();
     animateMenu();
   });
-}
+};
 
 calculateValues();
 
 //toggleBtn.onclick = toggleMenu;
-toggleBtn.addEventListener('click', toggleMenu, false);
+toggleBtn.addEventListener("click", toggleMenu, false);
 window.addEventListener("resize", resizeHandler, false);
 
 // footer family
+const fClose = document.querySelector(".family_close span");
+const fSubBg = document.querySelector(".family_bg");
+const fOpen = document.querySelector(".family button");
 
+fClose.addEventListener("click", () => {
+  fSubBg.style.display = "none";
+});
 
-const fClose = document.querySelector('.family_close span')
-const fSubBg= document.querySelector('.family_bg')
-const fOpen = document.querySelector('.family button')
-
-fClose.addEventListener('click',() => {
-  fSubBg.style.display = 'none'
-})
-
-fOpen.addEventListener('click',() => {
-  fSubBg.style.display = 'block'
-})
+fOpen.addEventListener("click", () => {
+  fSubBg.style.display = "block";
+});

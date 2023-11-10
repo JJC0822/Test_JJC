@@ -6,10 +6,28 @@ body {
 
 /* main */
 .i_svg {
-  padding-top: 15%;
+  padding-top: 13%;
   text-align: center;
   line-height: 1.4;
   font-size: 16px;
+}
+
+.i_svg_i .page_title_img {
+  min-width: 380px;
+  max-width: 480px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 8% auto;
+}
+
+.i_svg_i .page_title_txt {
+  min-width: 420px;
+  max-width: 700px;
+  position: relative;
+
 }
 
 .i_svg p {
